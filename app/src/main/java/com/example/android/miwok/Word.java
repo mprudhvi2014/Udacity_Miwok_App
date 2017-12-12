@@ -12,16 +12,19 @@ public class Word {
     private String EngName;
     private int ImageId = NO_IMAGEId;
     private  static final int NO_IMAGEId = -1;
+    private int AudioId;
 
-    public Word(String MilName, String EngName){
+    public Word(String MilName, String EngName, int AudioId){
         this.MilName = MilName;
         this.EngName = EngName;
+        this.AudioId = AudioId;
     }
 
-    public Word(String MilName, String EngName, int ImageId){
+    public Word(String MilName, String EngName, int ImageId, int AudioId){
         this.MilName = MilName;
         this.EngName = EngName;
         this.ImageId = ImageId;
+        this.AudioId = AudioId;
     }
 
     public String getMilName() {
@@ -38,6 +41,10 @@ public class Word {
 
     public boolean hasImage() {
         return ImageId != NO_IMAGEId;
+    }
+
+    public int getAudioId() {
+        return AudioId;
     }
 
 }
